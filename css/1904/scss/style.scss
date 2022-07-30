@@ -1,0 +1,391 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style-type: none;
+}
+
+body {
+    color: #272727;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 1190px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.header {
+    
+    background-image: url(../images/bc-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 793px;
+    background-position: center;
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+
+        a {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 24px;
+            color: #fff;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.menu {
+
+    li + li {
+        margin-left: 50px;
+    }
+
+    a {
+        opacity: 0.5;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.menu__list-items{
+    display: flex;
+}
+
+.user__nav {
+    a + a {
+        margin-left: 43px;
+        color: #250f8a;
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 8px 43px;
+    }
+}
+
+.header-slider {
+    margin-top: 140px;
+
+    &__item-content {
+        display: flex;
+        color: white;
+    }
+
+    &__item-info {
+        margin-right: 66px;
+        max-width: 505px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 60px;
+
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 55px;
+        margin-bottom: 60px;
+    }
+
+    &__btn {
+        color: #250f8a;
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 24px;
+        text-transform: uppercase;
+        padding: 13px 39px;
+        background: #ffca00;
+        border-radius: 25px;
+    }
+}
+
+.header-dots {
+    position: absolute;
+    right: 0;
+    top: 27%;
+
+    button {
+        border: none;
+        background-color: #fff;
+        opacity: 0.5;
+        border-radius: 3.5px;
+        font-size: 0;
+        height: 7px;
+        width: 7px;
+        padding: 0;
+        outline: none;
+        cursor: pointer;
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.header-dots .slick-active button {
+    opacity: 1;
+    width: 15px;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 45px;
+    color: #202020;
+}
+
+.specialised {
+    padding: 55px 0 93px;
+    background-image: url(../images/bc-sp.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+
+    &__title {
+        text-align: center;
+        margin-bottom: 96px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        max-width: 280px * 3 + 70px * 2;
+        margin: 0 auto;
+    }
+
+    &__item {
+        margin-left: 70px;
+        text-align: center;
+    }
+
+    &__item-title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 24px;
+        color: #202020;
+        margin-bottom: 11px;
+    }
+
+    &__item-text {
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 24px;
+        color: #272727;
+        opacity: 0.7;
+    }
+}
+
+$bc-color: #f4f9fd;
+
+.advantages {
+    background-color: $bc-color;
+    padding-top: 64px;
+
+    &-box {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 75px;
+
+        &__info {
+            max-width: 455px;
+            padding-left: 48px;
+            padding-top: 60px;
+            background-image: url(../images/title-bc-1.svg);
+            background-repeat: no-repeat;
+            background-position: 22px 76px;
+        }
+
+        &__title {
+            padding-bottom: 21px;
+            color: #202020;
+            padding: 68px 0 27px;
+        }
+
+        &__text {
+            max-width: 420px;
+            color: #272727;
+
+            p {
+                margin: 15px 0;
+            }
+        }
+    }
+}
+
+.advantages-box--right .advantages-box__info {
+    order: 1;
+    background-image: url(../images/title-bc-2.svg);
+    background-position: 22px 76px;
+}
+
+.advantages-box--left .advantages-box__info {
+    background-image: url(../images/title-bc-3.svg);
+    background-position: 22px 76px;
+}
+
+.advantages-box--left {
+    padding-bottom: 55px;
+}
+
+.reviews {
+    padding: 40px 115px 82px;
+    background-image: url(../images/bc-review.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__title {
+        color: white;
+        text-align: center;
+        margin-bottom: 48px;
+    }
+
+    &__blog-items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 300px * 3 + 20px * 2;
+        margin: 0 auto;
+    }
+
+    &__blog-item {
+        padding: 35px 20px;
+        background: rgba(#fff, 0.2);
+        border-radius: 5px;
+    }
+
+    &__item-top {
+        display: flex;
+        color: #ffffff;
+        margin-bottom: 54px;
+    }
+
+    &__item-img {
+        margin-right: 20px;
+    }
+
+    &__item-title {
+        font-weight: 600;
+    }
+
+    &__item-text {
+        opacity: 0.5;
+        font-weight: 400;
+    }
+
+    &__item-content {
+        color: white;
+        text-align: center;
+        position: relative;
+
+        &::before {
+            content: "";
+            background-image: url(../images/review-quo.png);
+            position: absolute;
+            width: 18px;
+            height: 15px;
+            right: 45%;
+            top: -25px;
+        }
+    }
+}
+
+.reviews__blog-item + .reviews__blog-item {
+    margin-left: 20px;
+}
+
+.footer {
+    height: 61px;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 39px;
+        align-items: center;
+    }
+
+    a + a {
+        margin-left: 27px;
+    }
+}
+
+@media (max-width: 924px) {
+    .header__top {
+        flex-wrap: wrap;
+    }
+
+    .user__nav {
+        width: 100%;
+        text-align: right;
+
+        a + a {
+            margin-left: 30px;
+        }
+    }
+}
+
+@media (max-width: 570px) {
+    .menu {
+
+        &___list-items {
+            display: none;
+        }
+
+        &__btn {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            overflow: hidden;
+
+            span {
+                width: 100%;
+                height: 2px;
+                top: 9px;
+                background-color: #fff;
+                position: absolute;
+            }
+
+            &::before{
+                content: '';
+                width: 100px;
+                height: 2px;
+                background-color: #fff;
+                position: absolute;
+                bottom: 0;
+            }
+
+            &::after {
+                content: '';
+                width: 100px;
+                height: 2px;
+                background-color: #fff;
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+}
